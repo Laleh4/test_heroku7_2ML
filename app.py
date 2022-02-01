@@ -30,9 +30,13 @@ model=pickle.load(f)
 f.close()
 """
 
-with open('Model_LR2sav.sav', 'rb') as f:
-       model = pickle.load(f)
-       
+#with open('tt.pkl', 'rb') as f:
+#      aa = pickle.load(f)
+
+model=pickle.load(open('Model_LR2sav.sav', 'rb'))
+
+#import joblib
+#filename = 'Model_LR2job.sav'       
         
 
 
