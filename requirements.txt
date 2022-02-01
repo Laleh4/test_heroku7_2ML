@@ -13,5 +13,4 @@ Numpy
 scikit-learn
 requests
 scipy
-pydantic
-#pathlib
+
