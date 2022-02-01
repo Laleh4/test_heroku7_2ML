@@ -16,6 +16,7 @@ import pickle
 app=FastAPI()
 
 import pathlib
+"""
 TT=pathlib.Path("__file__").parent.resolve()
 path_L=str(TT).replace("\\","/") 
 
@@ -26,7 +27,7 @@ path_L=str(P.parents[0])
 f=open(path_L+"/Model_LR2.pkl","rb")
 model=pickle.load(f)
 f.close()
-
+"""
 @app.get("/")
 def greet():
     return {"Hello World!"}
