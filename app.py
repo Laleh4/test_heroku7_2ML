@@ -41,9 +41,9 @@ model=pickle.load(open('Model_LR2.pkl', 'rb'))
 def greet():
     return {"Hello World!"}
 
-@app.get("/{name}")
-def hello(name:str):
-    return {'message': f'Hello,{name}'}
+#@app.get("/{name}")
+#def hello(name:str):
+#    return {'message': f'Hello,{name}'}
 
 
 
