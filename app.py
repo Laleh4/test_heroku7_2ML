@@ -8,8 +8,7 @@ Created on Mon Jan 31 09:43:41 2022
 from fastapi import FastAPI
 import uvicorn
 import pickle
-#from BankNotes import BankNote
-#from models import Women
+from BankNotes import BankNote
 
 
 
@@ -29,16 +28,7 @@ def greet():
 #@app.get("/{name}")
 #def hello(name:str):
 #    return {'message': f'Hello,{name}'}
-from pydantic import BaseModel
-class BankNote(BaseModel):
-    pregnacies: float
-    glucose:  float
-    bp :  float
-    skinthickness :  float
-    insulin :  float
-    bmi :  float
-    dpf:  float
-    age:  float
+
 
 
 
