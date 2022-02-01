@@ -32,7 +32,7 @@ def greet():
 
 
 
-@app.post("/predict")
+@app.post("/predict/")
 async def predictx(req: BankNote):
 
    return {'message': req}
