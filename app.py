@@ -26,8 +26,8 @@ P=pathlib.PureWindowsPath(path_L)
 
 path_L=str(P.parents[0])
 
-with open(path_L+"/"+'tt.pkl', 'rb') as f:
-        model = pickle.load(f)
+with open('tt.pkl', 'rb') as f:
+        aa = pickle.load(f)
         
 """        
 f=open(path_L+"/Model_LR2.pkl","rb")
