@@ -15,9 +15,9 @@ import pickle
 
 app=FastAPI()
 
-#f=open("Model_LR2.pkl","rb")
-#model=pickle.load(f)
-#f.close()
+f=open("Model_LR2.pkl","rb")
+model=pickle.load(f)
+f.close()
 
 @app.get("/")
 def greet():
