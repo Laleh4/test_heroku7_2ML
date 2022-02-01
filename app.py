@@ -29,14 +29,24 @@ def greet():
 #def hello(name:str):
 #    return {'message': f'Hello,{name}'}
 
+from pydantic import BaseModel
 
 
+class Item(BaseModel):
+    name: str
+    description: str
+    price: float
+    tax: str
 
+@app.post("/items/")
+async def create_item(item: Item):
+    return item
+"""
 @app.post("/predict/")
 async def predictx(req: BankNote):
 
    return {'message': req}
-"""
+
 @app.post("/predict")
 async def predictx(req: BankNote):
     return {'message': req}
