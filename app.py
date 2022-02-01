@@ -22,7 +22,7 @@ model=pickle.load(open('Model_LR2.pkl', 'rb'))
 
 
 @app.get("/")
-def greet():
+async def greet():
     return {"Hello World!"}
 
 #@app.get("/{name}")
@@ -39,7 +39,7 @@ class Item(BaseModel):
     tax: str
 
 @app.post("/items/")
-def create_item(item: Item):
+async def create_item(item: Item):
     return item
 """
 @app.post("/predict/")
