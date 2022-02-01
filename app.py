@@ -35,7 +35,7 @@ def greet():
 @app.post("/predict")
 def predictx(req: BankNote):
 
-return {'message': req}
+   return {'message': req}
 
 """
 def predict(req: BankNote):
