@@ -8,7 +8,7 @@ Created on Mon Jan 31 09:43:41 2022
 from fastapi import FastAPI
 import uvicorn
 import pickle
-#from BankNotes import BankNote
+from BankNotes import BankNote
 #from models import Women
 
 
@@ -40,7 +40,7 @@ model=pickle.load(open('Model_LR2.pkl', 'rb'))
 @app.get("/")
 def greet():
     return {"Hello World!"}
-"""
+
 @app.get("/{name}")
 def hello(name:str):
     return {'message': f'Hello,{name}'}
@@ -67,7 +67,7 @@ def predict(req: BankNote):
     else:
         return {"ans":"You have benn tested negative with {} probability".format(probab[0][0])}
     
-""" 
+
     
     
     
