@@ -33,11 +33,8 @@ f.close()
 #with open('tt.pkl', 'rb') as f:
 #      aa = pickle.load(f)
 
-#model=pickle.load(open('Model_LR2sav.sav', 'rb'))
+model=pickle.load(open('Model_LR2coef.pkl', 'rb'))
 
-import joblib
-filename = 'Model_LR2job.sav'       
-model = joblib.load(filename)    
 
 
 @app.get("/")
