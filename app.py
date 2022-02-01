@@ -15,7 +15,15 @@ import pickle
 
 app=FastAPI()
 
-f=open("Model_LR2.pkl","rb")
+import pathlib
+TT=pathlib.Path("__file__").parent.resolve()
+path_L=str(TT).replace("\\","/") 
+
+P=pathlib.PureWindowsPath(path_L)
+
+path_L=str(P.parents[0])
+
+f=open(path_L+"/Model_LR2.pkl","rb")
 model=pickle.load(f)
 f.close()
 
