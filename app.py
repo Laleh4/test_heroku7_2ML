@@ -42,7 +42,7 @@ class BankNote(BaseModel):
 
 
 
-@app.post("/predict/")
+@app.post("/predict")
 def predictx(req: BankNote):
 
 return {'message': req}
