@@ -32,15 +32,15 @@ def greet():
 
 
 
-#@app.post("/predict")
-#async def predictx(req: BankNote):
+@app.post("/predict")
+async def predictx(req: BankNote):
 
-#   return {'message': req}
-
+   return {'message': req}
+"""
 @app.post("/predict")
 async def predictx(req: BankNote):
     return {'message': req}
-"""
+
     preg=req.pregnacies
     glucose=req.glucose
     bp=req.bp
