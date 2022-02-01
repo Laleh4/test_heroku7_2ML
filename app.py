@@ -33,7 +33,7 @@ f.close()
 #with open('tt.pkl', 'rb') as f:
 #      aa = pickle.load(f)
 
-model=pickle.load(open('Model_LR2coef.pkl', 'rb'))
+model=pickle.load(open('ttarr.pkl', 'rb'))
 
 
 
