@@ -16,6 +16,9 @@ import pickle
 app=FastAPI()
 
 import pathlib
+with open('Model_LR2.pkl', 'rb') as f:
+        model = pickle.load(f)
+
 """
 TT=pathlib.Path("__file__").parent.resolve()
 path_L=str(TT).replace("\\","/") 
