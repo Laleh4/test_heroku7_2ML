@@ -30,7 +30,7 @@ model=pickle.load(f)
 f.close()
 """
 
-with open('Model_LR2sav', 'rb') as f:
+with open('Model_LR2sav.sav', 'rb') as f:
        model = pickle.load(f)
        
         
