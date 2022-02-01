@@ -38,7 +38,7 @@ class Item(BaseModel):
     price: float
     tax: str
 
-@app.post("/items/")
+@app.get("/items/")
 def create_item(item: Item):
     return item
 """
