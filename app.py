@@ -29,11 +29,25 @@ def greet():
 #@app.get("/{name}")
 #def hello(name:str):
 #    return {'message': f'Hello,{name}'}
-
+from pydantic import BaseModel
+class BankNote(BaseModel):
+    pregnacies: float
+    glucose:  float
+    bp :  float
+    skinthickness :  float
+    insulin :  float
+    bmi :  float
+    dpf:  float
+    age:  float
 
 
 
 @app.post("/predict/")
+def predictx(req: BankNote):
+
+return {'message': req}
+
+"""
 def predict(req: BankNote):
     preg=req.pregnacies
     glucose=req.glucose
@@ -44,7 +58,7 @@ def predict(req: BankNote):
     dpf=req.dpf
     age=req.age
     features=list([preg,glucose,bp,skinthickness, insulin,bmi,dpf,age])
-    """
+    
     predict=model.predict([features])
     probab=model.predict_proba([features])
     if (predict==1):
@@ -52,7 +66,6 @@ def predict(req: BankNote):
     else:
         return {"ans":"You have benn tested negative with {} probability".format(probab[0][0])}
     """
-    return {23}
     
 
     
