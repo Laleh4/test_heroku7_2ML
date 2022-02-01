@@ -14,7 +14,7 @@ import pickle
 
 
 app=FastAPI()
-
+"""
 import pathlib
 
 
@@ -25,15 +25,17 @@ path_L=str(TT).replace("\\","/")
 P=pathlib.PureWindowsPath(path_L)
 
 path_L=str(P.parents[0])
-
-with open('Model_LR2.pkl', 'rb') as f:
-       Model_LR2 = pickle.load(f)
-       
-"""        
 f=open(path_L+"/Model_LR2.pkl","rb")
 model=pickle.load(f)
 f.close()
 """
+
+with open('Model_LR2.pkl', 'rb') as f:
+       Model_LR2 = pickle.load(f)
+       
+        
+
+
 @app.get("/")
 def greet():
     return {"Hello World!"}
