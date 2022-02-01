@@ -28,7 +28,7 @@ path_L=str(P.parents[0])
 
 with open('Model_LR2.pkl', 'rb') as f:
        Model_LR2 = pickle.load(f)
-f.close()       
+       
 """        
 f=open(path_L+"/Model_LR2.pkl","rb")
 model=pickle.load(f)
