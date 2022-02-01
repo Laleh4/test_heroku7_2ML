@@ -14,24 +14,9 @@ from BankNotes import BankNote
 
 
 app=FastAPI()
-"""
-import pathlib
 
 
 
-TT=pathlib.Path("__file__").parent.resolve()
-path_L=str(TT).replace("\\","/") 
-
-P=pathlib.PureWindowsPath(path_L)
-
-path_L=str(P.parents[0])
-f=open(path_L+"/Model_LR2.pkl","rb")
-model=pickle.load(f)
-f.close()
-"""
-
-#with open('tt.pkl', 'rb') as f:
-#      aa = pickle.load(f)
 
 model=pickle.load(open('Model_LR2.pkl', 'rb'))
 
@@ -59,13 +44,15 @@ def predict(req: BankNote):
     dpf=req.dpf
     age=req.age
     features=list([preg,glucose,bp,skinthickness, insulin,bmi,dpf,age])
-    
+    """
     predict=model.predict([features])
     probab=model.predict_proba([features])
     if (predict==1):
         return {"ans":"You have benn tested positive with {} probability".format(probab[0][1])}
     else:
         return {"ans":"You have benn tested negative with {} probability".format(probab[0][0])}
+    """
+    return {23}
     
 
     
