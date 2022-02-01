@@ -33,7 +33,7 @@ def greet():
 
 
 
-@app.post("/predict")
+@app.post("/predict/")
 def predict(req: BankNote):
     preg=req.pregnacies
     glucose=req.glucose
