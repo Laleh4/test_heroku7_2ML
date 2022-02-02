@@ -28,7 +28,7 @@ def greet():
 #@app.get("/{name}")
 #def hello(name:str):
 #    return {'message': f'Hello,{name}'}
-
+"""
 from pydantic import BaseModel
 
 
@@ -42,13 +42,9 @@ class Item(BaseModel):
 def create_item(item: Item):
     return item
 """
-@app.post("/predict/")
-async def predictx(req: BankNote):
-
-   return {'message': req}
 
 @app.post("/predict")
-async def predictx(req: BankNote):
+def predictx(req: BankNote):
     return {'message': req}
 
     preg=req.pregnacies
@@ -67,7 +63,7 @@ async def predictx(req: BankNote):
         return {"ans":"You have benn tested positive with {} probability".format(probab[0][1])}
     else:
         return {"ans":"You have benn tested negative with {} probability".format(probab[0][0])}
-    """
+    
     
 
     
