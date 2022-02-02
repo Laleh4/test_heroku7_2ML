@@ -45,7 +45,7 @@ def create_item(item: Item):
 
 @app.post("/predict")
 def predictx(req: BankNote):
-    return {'message': req}
+    
 
     preg=req.pregnacies
     glucose=req.glucose
